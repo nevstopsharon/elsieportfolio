@@ -85,7 +85,7 @@ window.PORTFOLIO_CONTENT = {
     "platforms": {
       "xiaohongshu": {
         "href": "social.html#xiaohongshu",
-        "label": "Open Xiaohongshu content work",
+        "label": "小红书 XHS Notes · Visual diary — open content archive",
         "title": "小红书 / XHS",
         "eyebrow": "Notes · visual diary",
         "summary": "An image-led archive for observations, recommendations and visual storytelling. Final posts will be grouped by repeatable content formats rather than displayed as an undifferentiated feed.",
@@ -95,7 +95,7 @@ window.PORTFOLIO_CONTENT = {
       },
       "douyin": {
         "href": "social.html#douyin",
-        "label": "Open Douyin content work",
+        "label": "抖音 DOUYIN Motion · Short video — open content archive",
         "title": "抖音 / DOUYIN",
         "eyebrow": "Motion · short video",
         "summary": "A motion-first archive for short video concepts, covers and platform-specific storytelling. Final clips will show the hook, pacing and visual decision behind each post.",
