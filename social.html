@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Social media content and strategy archive by WEI XINRU.">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Social Media — WEI XINRU</title>
+  <link rel="icon" href="data:,">
+  <style>
+    @font-face{font-family:"Realistic Nature";src:url("assets/fonts/Realistic-Nature.otf") format("opentype");font-display:swap}
+    @font-face{font-family:"Times New Normal";src:url("assets/fonts/Times-New-Normal-Regular.ttf") format("truetype");font-display:swap}
+    :root{--paper:#fff;--ink:#151515;--muted:#676767;--xhs:#f44d43;--douyin:#ff275c;--cyan:#29f5ef;--line:2px;--focus:#1676c8;--max:1680px}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth;background:var(--paper)}body{margin:0;background:var(--paper);color:var(--ink);font-family:"Times New Normal",Georgia,serif}a{color:inherit}img{display:block;max-width:100%}
+    :focus-visible{outline:3px solid var(--focus);outline-offset:4px}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+    .social-header{position:sticky;z-index:20;top:0;display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:24px;min-height:72px;padding:12px 32px;border-bottom:var(--line) solid var(--ink);background:rgba(255,255,255,.94);backdrop-filter:blur(12px)}
+    .social-header strong{font-size:13px;letter-spacing:.08em}.back-link{justify-self:start;display:inline-flex;align-items:center;min-height:44px;text-decoration:none}.back-link:hover{text-decoration:underline;text-underline-offset:4px}
+    .platform-nav{justify-self:end;display:flex;gap:8px}.platform-nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 14px;border:1px solid var(--ink);border-radius:999px;text-decoration:none;font-size:11px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;box-shadow:0 4px 0 rgba(21,21,21,.18);transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease}.platform-nav a:hover,.platform-nav a:focus-visible{transform:translateY(-2px);box-shadow:0 7px 0 rgba(21,21,21,.25)}.platform-nav a[aria-current="location"]{background:var(--ink);color:#fff}
+    main{max-width:var(--max);margin:auto;padding-inline:5vw}
+    .platform{min-height:100svh;padding:12vh 0;border-bottom:var(--line) solid var(--ink);scroll-margin-top:72px;display:grid;grid-template-columns:minmax(260px,34%) minmax(0,66%);gap:clamp(32px,5vw,96px);align-items:start}
+    .platform-copy{position:sticky;top:120px;display:flex;min-height:64vh;flex-direction:column;justify-content:space-between}.platform-copy h1{margin:0;font-family:"Realistic Nature",Georgia,serif;font-size:clamp(64px,7.6vw,136px);font-weight:400;line-height:.96;letter-spacing:-.04em}.eyebrow{display:block;margin-bottom:18px;font-size:12px;letter-spacing:.09em;text-transform:uppercase}.platform-copy p{max-width:440px;margin:0 0 28px;font-size:clamp(15px,1.15vw,21px);line-height:1.55}
+    .platform-facts{display:grid;gap:10px;margin:0;padding:0;list-style:none}.platform-facts li{display:flex;justify-content:space-between;gap:24px;padding-top:10px;border-top:1px solid var(--ink);font-size:12px;letter-spacing:.05em;text-transform:uppercase}.platform-facts span:first-child{color:var(--muted)}
+    .archive{min-height:72vh}.archive-empty{min-height:72vh;padding:clamp(20px,3vw,48px);border:var(--line) solid var(--ink)}.archive-empty>p{max-width:520px;margin:0 0 8vh;font-size:clamp(17px,1.4vw,24px);line-height:1.45}.archive-empty strong{display:block;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+    .xhs-paper{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}.xhs-note{min-height:300px;padding:22px;border:1px solid var(--ink);background:#fff;box-shadow:10px 12px 0 rgba(21,21,21,.1);transform:rotate(-1.5deg);display:flex;flex-direction:column;justify-content:space-between}.xhs-note:nth-child(2){margin-top:80px;transform:rotate(1.2deg);background:#fff5f4}.xhs-note:nth-child(3){min-height:220px;transform:rotate(.8deg);background:var(--xhs);color:#fff}.xhs-note__image{height:160px;border:1px dashed currentColor;display:grid;place-items:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase}.xhs-note span{font-size:11px;letter-spacing:.07em;text-transform:uppercase}.xhs-note h2{margin:20px 0 0;font-size:clamp(24px,2.2vw,40px);line-height:1}
+    .douyin-stage{position:relative;min-height:72vh;display:grid;grid-template-columns:1fr 1fr;gap:clamp(16px,3vw,40px);align-items:center;padding:clamp(20px,3vw,48px);border:var(--line) solid var(--ink);background:#111;color:#fff;overflow:hidden}.douyin-stage::before{content:"";position:absolute;width:280px;height:280px;right:-80px;top:-80px;border-radius:50%;background:var(--cyan);filter:blur(90px);opacity:.24}.motion-phone{position:relative;z-index:1;aspect-ratio:9/18.5;padding:10px;border:2px solid #fff;border-radius:38px;background:#050505;box-shadow:12px 15px 0 rgba(255,39,92,.65)}.motion-phone:nth-child(2){transform:translateY(52px)}.motion-screen{height:100%;padding:26px 18px;border:1px solid #fff;border-radius:29px;display:flex;flex-direction:column;justify-content:space-between;background:linear-gradient(160deg,#161616 0 60%,var(--douyin) 61%)}.motion-screen::before{content:"";align-self:center;width:34%;height:14px;border-radius:999px;background:#222}.motion-frame{min-height:42%;border:1px dashed #fff;display:grid;place-items:center;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase}.motion-screen h2{margin:0;font-size:clamp(24px,2.6vw,44px);line-height:.9}.motion-screen span{font-size:10px;letter-spacing:.08em;text-transform:uppercase}
+    .archive-items{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.archive-item{margin:0;border:1px solid var(--ink);background:#fff;overflow:hidden}.archive-item img{width:100%;aspect-ratio:4/5;object-fit:cover}.archive-item figcaption{padding:18px}.archive-item h2{margin:0 0 8px;font-size:24px}.archive-item p{margin:0;line-height:1.5}.platform--douyin .archive-item img{aspect-ratio:9/16}.platform--douyin .archive-items{padding:24px;background:#111;color:#fff}.platform--douyin .archive-item{color:var(--ink)}
+    @media(max-width:760px){
+      .social-header{grid-template-columns:1fr auto;padding:8px 12px}.social-header strong{display:none}.platform-nav{gap:4px}.platform-nav a{padding-inline:10px;font-size:10px}.platform{grid-template-columns:1fr;padding-block:8vh;gap:40px}.platform-copy{position:static;min-height:auto;gap:48px}.platform-copy h1{font-size:clamp(56px,17vw,88px)}.archive-empty,.douyin-stage{min-height:60vh}.xhs-paper{grid-template-columns:1fr}.xhs-note:nth-child(2){margin-top:0}.douyin-stage{padding:16px;gap:12px}.motion-phone{border-radius:28px;padding:7px}.motion-screen{border-radius:21px;padding:18px 10px}.motion-phone:nth-child(2){transform:translateY(28px)}.archive-items{grid-template-columns:1fr}
+    }
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
+  </style>
+</head>
+<body>
+  <header class="social-header"><a class="back-link" href="index.html#social">← Back to homepage</a><strong>WEI XINRU · SOCIAL MEDIA</strong><nav class="platform-nav" aria-label="Social platforms"><a href="#xiaohongshu" aria-current="location">Xiaohongshu</a><a href="#douyin">Douyin</a></nav></header>
+  <main>
+    <section id="xiaohongshu" class="platform platform--xhs" data-platform="xiaohongshu" aria-labelledby="xhs-title">
+      <div class="platform-copy"><h1 id="xhs-title">小红书 /<br>XHS</h1><div><span class="eyebrow">Notes · visual diary</span><p data-field="summary">An image-led archive for observations, recommendations and visual storytelling.</p><ul class="platform-facts"><li><span>Format</span><strong data-field="format">Image-led notes</strong></li><li><span>Selected work</span><strong data-field="count">0 posts</strong></li><li><span>Status</span><strong>Archive in progress</strong></li></ul></div></div>
+      <div class="archive" data-archive="xiaohongshu"><div class="archive-empty"><p>Real post screenshots and context will appear here. The layout is ready without presenting sample content as published work.</p><strong>Selected posts pending</strong><div class="xhs-paper" aria-hidden="true"><article class="xhs-note"><div class="xhs-note__image">Screenshot 01</div><div><span>Visual diary</span><h2>Note pending</h2></div></article><article class="xhs-note"><div class="xhs-note__image">Screenshot 02</div><div><span>Useful observation</span><h2>Note pending</h2></div></article><article class="xhs-note"><div><span>Content system</span><h2>Formats before feed.</h2></div></article></div></div></div>
+    </section>
+    <section id="douyin" class="platform platform--douyin" data-platform="douyin" aria-labelledby="douyin-title">
+      <div class="platform-copy"><h1 id="douyin-title">抖音 /<br>DOUYIN</h1><div><span class="eyebrow">Motion · short video</span><p data-field="summary">A motion-first archive for short video concepts, covers and platform-specific storytelling.</p><ul class="platform-facts"><li><span>Format</span><strong data-field="format">Short-form motion</strong></li><li><span>Selected work</span><strong data-field="count">0 clips</strong></li><li><span>Status</span><strong>Archive in progress</strong></li></ul></div></div>
+      <div class="archive" data-archive="douyin"><div class="douyin-stage"><article class="motion-phone"><div class="motion-screen"><div class="motion-frame">Clip 01 pending</div><div><span>Opening hook</span><h2>Motion<br>archive</h2></div></div></article><article class="motion-phone"><div class="motion-screen"><div class="motion-frame">Clip 02 pending</div><div><span>Visual rhythm</span><h2>Story<br>in motion</h2></div></div></article></div></div>
+    </section>
+  </main>
+  <script src="site-content.js"></script>
+  <script>
+    (()=>{
+      const platforms=window.PORTFOLIO_CONTENT?.social?.platforms||{};
+      const sections=[...document.querySelectorAll(".platform")];
+      const navLinks=[...document.querySelectorAll('.platform-nav a[href^="#"]')];
+      const setText=(root,selector,value)=>{const node=root.querySelector(selector);if(node&&value)node.textContent=value};
+
+      sections.forEach(section=>{
+        const platform=platforms[section.dataset.platform];if(!platform)return;
+        setText(section,"h1",platform.title);setText(section,".eyebrow",platform.eyebrow);setText(section,'[data-field="summary"]',platform.summary);setText(section,'[data-field="format"]',platform.format);
+        const items=Array.isArray(platform.items)?platform.items:[];setText(section,'[data-field="count"]',`${items.length} ${section.dataset.platform==="douyin"?(items.length===1?"clip":"clips"):(items.length===1?"post":"posts")}`);
+        if(!items.length)return;
+        const archive=section.querySelector(".archive");const grid=document.createElement("div");grid.className="archive-items";
+        items.forEach(item=>{const figure=document.createElement("figure");figure.className="archive-item";const image=document.createElement("img");image.src=item.src;image.alt=item.alt;image.loading="lazy";const caption=document.createElement("figcaption");const title=document.createElement("h2");title.textContent=item.title;const body=document.createElement("p");body.textContent=item.caption||"";caption.append(title,body);figure.append(image,caption);grid.append(figure)});archive.replaceChildren(grid);
+      });
+
+      const observer=new IntersectionObserver(entries=>{const active=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];if(!active)return;navLinks.forEach(link=>{if(link.hash===`#${active.target.id}`)link.setAttribute("aria-current","location");else link.removeAttribute("aria-current")})},{threshold:[.35,.6]});sections.forEach(section=>observer.observe(section));
+    })();
+  </script>
+</body>
+</html>
