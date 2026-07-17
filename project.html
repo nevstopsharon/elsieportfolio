@@ -35,6 +35,9 @@
     .case--popup .case-visual{background:#ef4b3f}.case--website .case-visual{background:#151515;color:#fff}.case--app .case-visual{background:#8c7cff}
     .case-visual__word{font-family:"Realistic Nature",Georgia,serif;font-size:clamp(72px,15vw,250px);line-height:.72;text-align:center;transform:rotate(-4deg)}
     .case-visual__status{position:absolute;right:24px;bottom:24px;padding:10px 14px;border:1px solid currentColor;background:inherit;font-size:11px;letter-spacing:.08em;text-transform:uppercase}
+    .case-visual__image{width:100%;height:100%;min-height:65vh;display:block;object-fit:cover}
+    .case-gallery{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:clamp(16px,2vw,32px);margin:0 0 10vh}
+    .case-gallery:empty{display:none}.case-gallery figure{grid-column:span 6;margin:0}.case-gallery figure:nth-child(3n){grid-column:span 12}.case-gallery img{width:100%;height:auto;display:block;border:1px solid var(--ink)}.case-gallery figcaption{padding-top:10px;color:var(--muted);font-size:clamp(12px,.8vw,14px);line-height:1.4}
     .case-story{display:grid;grid-template-columns:minmax(260px,34%) minmax(0,66%);gap:clamp(32px,5vw,96px)}
     .case-story h2{position:sticky;top:160px;margin:0;font-family:"Realistic Nature",Georgia,serif;font-size:clamp(42px,4.5vw,78px);font-weight:400;line-height:.85}
     .story-grid{display:grid;gap:16px}.story-card{padding:clamp(24px,3vw,48px);border:1px solid var(--ink);background:#fff}.story-card span{font-size:11px;letter-spacing:.08em;text-transform:uppercase}.story-card h3{margin:32px 0 16px;font-size:clamp(24px,2.3vw,42px);line-height:1}.story-card p,.story-card li{font-size:clamp(14px,1.08vw,20px);line-height:1.55}.story-card ol{margin:0;padding-left:1.4em}
@@ -43,7 +46,7 @@
     .site-email{display:inline-flex;align-items:center;min-height:44px;margin:8vh 4vw 5vh;color:inherit;font-size:12px;font-weight:700;letter-spacing:.05em;text-underline-offset:4px}
     .site-email:focus-visible{outline:3px solid currentColor;outline-offset:4px}
     @media(max-width:760px){
-      .project-header{grid-template-columns:1fr auto;padding:8px 12px}.project-header strong{display:none}.project-count{font-size:10px}.filters{top:60px;justify-content:flex-start;padding-inline:12px}.case{padding-block:8vh}.case-head,.case-story{grid-template-columns:1fr;gap:32px}.case h1{font-size:clamp(56px,17vw,88px)}.case-intro>p{font-size:17px}.case-visual{min-height:50vh;margin-block:7vh}.case-story h2{position:static}.case-facts{grid-template-columns:1fr}.case-next{align-items:flex-start}.case-next span:first-child{max-width:75%}
+      .project-header{grid-template-columns:1fr auto;padding:8px 12px}.project-header strong{display:none}.project-count{font-size:10px}.filters{top:60px;justify-content:flex-start;padding-inline:12px}.case{padding-block:8vh}.case-head,.case-story{grid-template-columns:1fr;gap:32px}.case h1{font-size:clamp(56px,17vw,88px)}.case-intro>p{font-size:17px}.case-visual{min-height:50vh;margin-block:7vh}.case-visual__image{min-height:50vh}.case-gallery{grid-template-columns:1fr}.case-gallery figure,.case-gallery figure:nth-child(3n){grid-column:auto}.case-story h2{position:static}.case-facts{grid-template-columns:1fr}.case-next{align-items:flex-start}.case-next span:first-child{max-width:75%}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition-duration:.01ms!important}}
   </style>
@@ -60,17 +63,17 @@
   <main id="project-list">
     <section id="popup" class="case case--popup" data-category="popup" aria-labelledby="popup-title">
       <div class="case-head"><div><div class="case-index"><span>01 / 03</span><span>6 min read</span></div><h1 id="popup-title">Pop-up Experience</h1></div><div class="case-intro"><p>A concept-led event project connecting spatial planning, visual identity and audience participation.</p><ul class="case-facts"><li><span>Role</span><strong data-field="role">Pop-up planning / experience design</strong></li><li><span>Context</span><strong data-field="context">Completed after graduation</strong></li><li><span>Year</span><strong data-field="year">To be confirmed</strong></li><li><span>Status</span><strong data-field="status">Project documentation in progress</strong></li></ul></div></div>
-      <div class="case-visual" role="img" aria-label="Placeholder for final pop-up project imagery"><span class="case-visual__word">POP<br>UP</span><span class="case-visual__status">Real project images pending</span></div>
+      <div class="case-visual" role="img" aria-label="Placeholder for final pop-up project imagery"><span class="case-visual__word">POP<br>UP</span><span class="case-visual__status">Real project images pending</span></div><div class="case-gallery" data-field="media"></div>
       <div class="case-story"><h2>CASE<br>NOTES</h2><div class="story-grid"><article class="story-card"><span>01 · Overview</span><h3>What this project covers</h3><p data-field="overview"></p></article><article class="story-card"><span>02 · Process</span><h3>How the story will unfold</h3><ol data-field="process"></ol></article><article class="story-card"><span>03 · Evidence</span><h3>What still needs proof</h3><p data-field="result"></p></article></div></div><a class="case-next" href="#artist-website"><span>Next: Artist Website</span><span aria-hidden="true">→</span></a>
     </section>
     <section id="artist-website" class="case case--website" data-category="website" aria-labelledby="website-title">
       <div class="case-head"><div><div class="case-index"><span>02 / 03</span><span>5 min read</span></div><h1 id="website-title">Artist Website</h1></div><div class="case-intro"><p>A personal website designed after graduation for an artist.</p><ul class="case-facts"><li><span>Role</span><strong data-field="role">Web design / content structure / implementation</strong></li><li><span>Context</span><strong data-field="context">Completed after graduation</strong></li><li><span>Year</span><strong data-field="year">To be confirmed</strong></li><li><span>Status</span><strong data-field="status">Launch evidence pending</strong></li></ul></div></div>
-      <div class="case-visual" role="img" aria-label="Placeholder for final artist website screenshots"><span class="case-visual__word">ART<br>ONLINE</span><span class="case-visual__status">Final screenshots pending</span></div>
+      <div class="case-visual" role="img" aria-label="Placeholder for final artist website screenshots"><span class="case-visual__word">ART<br>ONLINE</span><span class="case-visual__status">Final screenshots pending</span></div><div class="case-gallery" data-field="media"></div>
       <div class="case-story"><h2>CASE<br>NOTES</h2><div class="story-grid"><article class="story-card"><span>01 · Overview</span><h3>What this project covers</h3><p data-field="overview"></p></article><article class="story-card"><span>02 · Process</span><h3>How the story will unfold</h3><ol data-field="process"></ol></article><article class="story-card"><span>03 · Evidence</span><h3>What still needs proof</h3><p data-field="result"></p></article></div></div><a class="case-next" href="#app-proposal"><span>Next: App Product Proposal</span><span aria-hidden="true">→</span></a>
     </section>
     <section id="app-proposal" class="case case--app" data-category="app" aria-labelledby="app-title">
       <div class="case-head"><div><div class="case-index"><span>03 / 03</span><span>7 min read</span></div><h1 id="app-title">App Product Proposal</h1></div><div class="case-intro"><p>One of three mobile app proposals developed during master’s study.</p><ul class="case-facts"><li><span>Role</span><strong data-field="role">Product concept / user research / interface design</strong></li><li><span>Context</span><strong data-field="context">Master’s study concept</strong></li><li><span>Year</span><strong data-field="year">To be confirmed</strong></li><li><span>Status</span><strong data-field="status">Not launched</strong></li></ul></div></div>
-      <div class="case-visual" role="img" aria-label="Placeholder for final app proposal screens"><span class="case-visual__word">APP<br>IDEA</span><span class="case-visual__status">Concept · Not launched</span></div>
+      <div class="case-visual" role="img" aria-label="Placeholder for final app proposal screens"><span class="case-visual__word">APP<br>IDEA</span><span class="case-visual__status">Concept · Not launched</span></div><div class="case-gallery" data-field="media"></div>
       <div class="case-story"><h2>CASE<br>NOTES</h2><div class="story-grid"><article class="story-card"><span>01 · Overview</span><h3>What this project covers</h3><p data-field="overview"></p></article><article class="story-card"><span>02 · Process</span><h3>How the story will unfold</h3><ol data-field="process"></ol></article><article class="story-card"><span>03 · Evidence</span><h3>What still needs proof</h3><p data-field="result"></p></article></div></div><a class="case-next" href="#popup"><span>Continue: Pop-up Experience</span><span aria-hidden="true">↻</span></a>
     </section>
     <section id="empty-state" class="empty-state" aria-hidden="true"><div><h1>NOT HERE<br>YET</h1><p>No finished project is available in this category. The filter remains visible so the future information architecture is already testable.</p></div></section>
@@ -86,6 +89,7 @@
       const empty=document.querySelector("#empty-state");
       const projects=new Map((content.projects||[]).map(project=>[project.id,project]));
       const setText=(root,selector,value)=>{const node=root.querySelector(selector);if(node&&value)node.textContent=value};
+      const applyImageMedia=(image,media)=>{if(media?.src)image.src=media.src;if(media?.alt)image.alt=media.alt;if(Number.isInteger(media?.width)&&media.width>0)image.width=media.width;if(Number.isInteger(media?.height)&&media.height>0)image.height=media.height};
 
       cases.forEach((section,index)=>{
         const project=projects.get(section.id);if(!project)return;
@@ -95,6 +99,8 @@
         setText(section,'[data-field="overview"]',project.detail?.overview);
         const process=section.querySelector('[data-field="process"]');if(process&&Array.isArray(project.detail?.process))process.replaceChildren(...project.detail.process.map(label=>{const item=document.createElement("li");item.textContent=label;return item}));
         setText(section,'[data-field="result"]',project.detail?.result);
+        const cover=project.cover;const visual=section.querySelector(".case-visual");if(visual&&cover?.src&&cover?.alt){const image=document.createElement("img");image.className="case-visual__image";image.decoding="async";applyImageMedia(image,cover);visual.replaceChildren(image);visual.removeAttribute("role");visual.removeAttribute("aria-label")}
+        const media=project.detail?.media;const gallery=section.querySelector('[data-field="media"]');if(gallery&&Array.isArray(media)){gallery.replaceChildren(...media.filter(item=>item?.src&&item?.alt).map(item=>{const figure=document.createElement("figure");const image=document.createElement("img");image.loading="lazy";image.decoding="async";applyImageMedia(image,item);figure.append(image);if(item.caption){const caption=document.createElement("figcaption");caption.textContent=item.caption;figure.append(caption)}return figure}))}
         const indexLine=section.querySelector(".case-index span:first-child");if(indexLine)indexLine.textContent=`${project.index} / ${String(cases.length).padStart(2,"0")}`;
         setText(section,".case-index span:last-child",project.readTime?.toLowerCase());
       });
@@ -111,3 +117,4 @@
   </script>
 </body>
 </html>
+

@@ -37,12 +37,14 @@ window.PORTFOLIO_CONTENT = {
       "summary": "A concept-led pop-up experience connecting space, story and participation.",
       "tags": ["Strategy", "Event", "Identity"],
       "href": "project.html#popup",
+      "cover": null,
       "detail": {
         "role": "Pop-up planning / experience design",
         "context": "Completed after graduation",
         "overview": "A pop-up event planning project connecting spatial flow, audience participation and a coherent visual idea.",
         "process": ["Project brief and audience", "Visitor journey and spatial plan", "Visual direction and activation ideas"],
-        "result": "Outcome documentation and final project images pending."
+        "result": "Outcome documentation and final project images pending.",
+        "media": []
       }
     },
     {
@@ -56,12 +58,14 @@ window.PORTFOLIO_CONTENT = {
       "summary": "A flexible portfolio system balancing artwork, personality and simple maintenance.",
       "tags": ["Website", "UX", "Code"],
       "href": "project.html#artist-website",
+      "cover": null,
       "detail": {
         "role": "Web design / content structure / implementation",
         "context": "Completed after graduation",
         "overview": "A personal website created for an artist, balancing artwork visibility, personal identity and straightforward maintenance.",
         "process": ["Artist needs and content inventory", "Information architecture and visual direction", "Responsive implementation and handoff"],
-        "result": "Verified launch details, collaboration credits and final screenshots pending."
+        "result": "Verified launch details, collaboration credits and final screenshots pending.",
+        "media": []
       }
     },
     {
@@ -76,12 +80,14 @@ window.PORTFOLIO_CONTENT = {
       "tags": ["Concept", "Not launched", "Research"],
       "href": "project.html#app-proposal",
       "disclosure": "NOT LAUNCHED",
+      "cover": null,
       "detail": {
         "role": "Product concept / user research / interface design",
         "context": "Master’s study concept",
         "overview": "One of three mobile app proposals developed during master’s study. It remains concept work and is not presented as a launched product.",
         "process": ["Problem framing and research", "Product concept and user flow", "Prototype and evaluation plan"],
-        "result": "Research evidence, prototype screens and academic context pending."
+        "result": "Research evidence, prototype screens and academic context pending.",
+        "media": []
       }
     }
   ],
