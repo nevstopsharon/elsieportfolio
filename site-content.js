@@ -14,8 +14,8 @@ window.PORTFOLIO_CONTENT = {
     "siteUrl": ""
   },
   "hero": {
-    "intro": "I design, plan and code.",
-    "equationSentence": "I make complex things clear—and clear things enjoyable.",
+    "intro": "I plan, design and code.",
+    "equationSentence": "I make complex things easy—and easy things fun.",
     "hint": "Scroll to explore"
   },
   "projects": [
@@ -162,3 +162,4 @@ window.PORTFOLIO_CONTENT = {
     "resumeZh": ""
   }
 };
+

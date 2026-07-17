@@ -42,16 +42,18 @@
     .hero__portrait img{width:100%;height:100%;object-fit:cover;object-position:58% 50%}
     .hero-portrait-mask{position:absolute;z-index:30;inset:0;overflow:hidden;pointer-events:none;clip-path:polygon(44% 10%,98% 10%,98% 90%,44% 90%)}
     .hero-title--inverse{color:#fff}
-    .creative-equation{position:absolute;z-index:40;left:32px;bottom:28px;width:min(620px,76vw);min-height:150px;padding:14px;border:2px solid var(--ink);background:rgba(255,255,255,.94);box-shadow:8px 8px 0 rgba(21,21,21,.12);font-family:"Times New Normal",Georgia,serif}
-    .equation-line{display:flex;align-items:center;gap:10px;min-height:56px;font-size:clamp(18px,1.65vw,30px);font-weight:700;letter-spacing:.04em}
-    .equation-slot{display:inline-flex;align-items:center;justify-content:center;width:clamp(82px,8vw,124px);height:42px;border-bottom:2px solid var(--ink)}
-    .equation-token--boxed{border:2px solid var(--ink);background:#fff;color:var(--ink)}
-    .equation-token{position:absolute;left:var(--x);top:var(--y);padding:6px 9px;font:700 clamp(11px,.9vw,15px)/1 Arial,sans-serif;letter-spacing:.08em;box-shadow:4px 4px 0 rgba(21,21,21,.16);transform:rotate(var(--rest-r));transition:left .68s var(--ease),top .68s var(--ease),transform .68s var(--ease),box-shadow .3s ease}
-    [data-equation-token="design"]{--x:6%;--y:2%;--rest-r:-3deg;transition-delay:0ms}.equation-token[data-equation-token="plan"]{--x:42%;--y:0%;--rest-r:2deg;transition-delay:70ms}.equation-token[data-equation-token="code"]{--x:68%;--y:22%;--rest-r:-1deg;transition-delay:140ms}
-    .equation-equals{font-weight:700}.equation-result{display:inline-flex;align-items:center;padding:8px 12px;background:var(--equation-result);font:700 clamp(15px,1.45vw,26px)/1 "Times New Normal",Georgia,serif;letter-spacing:.02em}
-    #equation-result{opacity:0;transform:translateY(10px);transition:opacity .35s ease,transform .35s var(--ease);white-space:nowrap}
-    #equation-sentence{min-height:2em;margin:12px 0 0;font-size:clamp(14px,1.18vw,22px);line-height:1.5}
-    .creative-equation.is-active .equation-token{left:var(--settled-left);top:var(--settled-top);transform:rotate(0);box-shadow:0 3px 0 rgba(21,21,21,.18)}
+    .creative-equation{position:absolute;z-index:40;inset:0;pointer-events:none;font-family:"Times New Normal",Georgia,serif}
+    .equation-dock{position:absolute;left:32px;bottom:28px;width:min(670px,calc(100vw - 64px));pointer-events:auto;outline:none}
+    .equation-dock:focus-visible{outline:2px solid var(--focus);outline-offset:10px;border-radius:2px}
+    .equation-kicker{display:block;margin-bottom:5px;font:600 10px/1.2 Arial,sans-serif;letter-spacing:.14em;color:#666}
+    .equation-line{display:flex;align-items:center;gap:10px;min-height:48px;font-size:clamp(17px,1.3vw,23px);font-weight:500;letter-spacing:.02em}
+    .equation-slot{display:inline-flex;align-items:center;justify-content:center;width:clamp(78px,7vw,110px);height:36px;border-bottom:1px solid rgba(21,21,21,.5)}
+    .equation-token{position:absolute;left:var(--x);top:var(--y);padding:0;color:var(--rest-color);font:600 clamp(44px,5.6vw,96px)/.9 Arial,sans-serif;letter-spacing:-.055em;text-shadow:0 2px 20px var(--rest-shadow);transform:rotate(var(--rest-r));transition:left .78s cubic-bezier(.2,1.18,.32,1),top .78s cubic-bezier(.2,1.18,.32,1),transform .78s cubic-bezier(.2,1.18,.32,1),font-size .78s cubic-bezier(.2,1.18,.32,1),letter-spacing .78s var(--ease),color .3s ease,text-shadow .3s ease}
+    [data-equation-token="plan"]{--x:49vw;--y:42vh;--rest-r:-4deg;--rest-color:#fff;--rest-shadow:rgba(0,0,0,.32);transition-delay:0ms}.equation-token[data-equation-token="design"]{--x:18vw;--y:68vh;--rest-r:3deg;--rest-color:#151515;--rest-shadow:rgba(255,255,255,.5);transition-delay:70ms}.equation-token[data-equation-token="code"]{--x:76vw;--y:62vh;--rest-r:-2deg;--rest-color:#fff;--rest-shadow:rgba(0,0,0,.32);transition-delay:140ms}
+    .equation-equals{font-weight:500}.equation-result{display:inline-flex;align-items:center;padding:6px 9px;border-radius:6px;background:rgba(255,214,10,.72);font:600 clamp(15px,1.25vw,22px)/1 "Times New Normal",Georgia,serif;letter-spacing:.01em}
+    #equation-result{opacity:0;transform:translateY(7px);transition:opacity .35s ease,transform .35s var(--ease);white-space:nowrap}
+    #equation-sentence{min-height:1.8em;margin:8px 0 0;font-size:clamp(14px,1.05vw,19px);line-height:1.5}
+    .creative-equation.is-active .equation-token{left:var(--settled-left);top:var(--settled-top);color:var(--ink);font-size:clamp(10px,.78vw,13px);letter-spacing:.11em;text-shadow:none;transform:translate(-50%,-50%) rotate(0)}
     .creative-equation.is-result-visible #equation-result{opacity:1;transform:none}
     .hero__hint{position:absolute;z-index:40;right:32px;bottom:28px;font-size:12px;font-weight:400;letter-spacing:.08em;text-transform:uppercase}
 
@@ -117,7 +119,7 @@
 
     @media(max-width:800px){
       .site-nav{padding:8px 12px;gap:8px;align-items:center}.site-nav__name{font-size:11px}.site-nav__links{gap:4px;flex-wrap:nowrap;justify-content:flex-end}.signal-link{height:44px;min-width:24px;padding-inline:2px;display:flex;align-items:center;font-size:10px}.signal-link::before{display:none}.signal-link:hover .signal-link__roll,.signal-link:focus-visible .signal-link__roll{transform:none}
-      .hero__name{top:28%;font-size:9.2vw}.hero__portrait{left:12vw;top:16vh;width:84vw;height:66vh}.hero__portrait img{object-position:58% 50%}.hero-portrait-mask{clip-path:polygon(12% 16%,96% 16%,96% 82%,12% 82%)}.creative-equation{left:12px;bottom:58px;width:86vw;min-height:142px;padding:8px;background:rgba(255,255,255,.94)}.equation-line{gap:3px;font-size:13px}.equation-slot{width:58px;height:34px}.equation-token{padding:5px 6px;font-size:9px}.equation-result{padding:6px 7px;font-size:12px}#equation-sentence{font-size:13px}.hero__hint{right:12px;bottom:28px;font-size:9px}
+      .hero__name{top:28%;font-size:9.2vw}.hero__portrait{left:12vw;top:16vh;width:84vw;height:66vh}.hero__portrait img{object-position:58% 50%}.hero-portrait-mask{clip-path:polygon(12% 16%,96% 16%,96% 82%,12% 82%)}.equation-dock{left:20px;bottom:56px;width:calc(100vw - 40px)}.equation-kicker{font-size:9px}.equation-line{gap:4px;font-size:13px}.equation-slot{width:56px;height:31px}.equation-token{font-size:clamp(34px,10.5vw,48px)}[data-equation-token="plan"]{--x:18vw;--y:39vh;--rest-color:#fff}[data-equation-token="design"]{--x:39vw;--y:67vh;--rest-color:#fff;--rest-shadow:rgba(0,0,0,.32)}[data-equation-token="code"]{--x:68vw;--y:51vh;--rest-color:#fff}.creative-equation.is-active .equation-token{font-size:9px}.equation-result{padding:5px 6px;font-size:12px}#equation-sentence{font-size:13px}.hero__hint{right:12px;bottom:28px;font-size:9px}
       .section-grid{padding:104px 20px 56px;grid-template-columns:1fr;gap:28px;align-content:start}.section-copy{min-height:32vh;padding:3vh 0 0}.section-title{font-size:clamp(56px,17vw,88px)}.section-detail p{font-size:15px}
       .projects-story{height:calc(100vh + 280vw)}.projects-sticky{padding-top:72px}.projects-heading{left:20px;top:var(--compact-top,88px);width:80vw;font-size:clamp(44px,12vw,64px)}.project-track{padding-left:20px;padding-right:20px;gap:20px;align-items:end;padding-top:24vh;padding-bottom:4vh}.project-card{flex-basis:88vw;height:61vh;grid-template-columns:1fr;grid-template-rows:54% 46%}.project-meta{padding:16px}.project-meta p{display:block;margin-bottom:10px;font-size:12px;line-height:1.35}.project-meta h3{margin:12px 0 8px;font-size:25px}.project-tags{margin-bottom:10px}.tag{padding:4px 6px;font-size:10px}.action{min-height:42px;padding:9px 14px}.project-visual{grid-row:2}.visual-word{font-size:25vw}
       .social-visual{min-height:56vh;gap:16px}.social-phone{width:42vw;max-width:190px;border-radius:34px}.social-phone__screen{border-radius:27px;padding:20px 12px}.social-phone::before{top:12px}
@@ -138,25 +140,7 @@
     </nav>
   </header>
 
-  <button id="motion-toggle" class="motion-toggle" type="button" aria-pressed="false">Pause motion</button>
-
-  <main>
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title" class="hero__name">WEI XINRU</h1>
-      <picture class="hero__portrait"><source media="(max-width:760px)" srcset="assets/images/hero-photo-mobile.webp"><img id="hero-portrait" src="assets/images/hero-photo-desktop.webp" width="1920" height="1280" alt="WEI XINRU sitting by the water in evening light"></picture>
-      <div class="hero-portrait-mask" aria-hidden="true"><div class="hero__name hero-title--inverse">WEI XINRU</div></div>
-      <div id="creative-equation" class="creative-equation" tabindex="0" aria-describedby="equation-accessible-copy">
-        <div class="equation-line" aria-hidden="true"><span class="equation-slot"></span><span>+</span><span class="equation-slot"></span><span>+</span><span class="equation-slot"></span><span class="equation-equals" aria-hidden="true">=</span><strong id="equation-result" class="equation-result equation-token--boxed">CLEAR × FUN</strong></div>
-        <span class="equation-token equation-token--boxed equation-token--settled" data-equation-token="design" aria-hidden="true">DESIGN</span><span class="equation-token equation-token--boxed equation-token--settled" data-equation-token="plan" aria-hidden="true">PLAN</span><span class="equation-token equation-token--boxed equation-token--settled" data-equation-token="code" aria-hidden="true">CODE</span>
-        <p id="equation-sentence" aria-hidden="true"></p>
-      </div>
-      <p id="equation-accessible-copy" class="sr-only">I design, plan and code. I make complex things clear—and clear things enjoyable.</p>
-      <span class="hero__hint">Scroll to explore</span>
-    </section>
-
-    <section id="projects" class="projects-story" aria-labelledby="projects-title">
-      <div class="projects-sticky">
-        <h2 id="projects-title" class="projects-heading">SELECTED<br>PROJECTS</h2>
+  <button id="motion-toggle" class…493 tokens truncated…/h2>
         <div id="project-track" class="project-track" role="region" aria-label="Selected projects. Scroll vertically or use arrow keys to move horizontally." tabindex="0">
           <article class="project-card" data-project-id="popup"><div class="project-meta"><span class="project-number">01 · POP-UP EXPERIENCE · 6 MIN READ</span><div><h3>Pop-up Experience</h3><p>A concept-led pop-up experience connecting space, story and participation.</p><div class="project-tags"><span class="tag">Strategy</span><span class="tag">Event</span><span class="tag">Identity</span></div><a class="action" href="project.html#popup">View project</a></div></div><div class="project-visual project-visual--popup" role="img" aria-label="Abstract red pop-up event visual"><span class="visual-word">POP<br>UP</span></div></article>
           <article class="project-card" data-project-id="artist-website"><div class="project-meta"><span class="project-number">02 · WEBSITE · 5 MIN READ</span><div><h3>Artist Website</h3><p>A flexible portfolio system balancing artwork, personality and simple maintenance.</p><div class="project-tags"><span class="tag">Website</span><span class="tag">UX</span><span class="tag">Code</span></div><a class="action" href="project.html#artist-website">View project</a></div></div><div class="project-visual project-visual--web" role="img" aria-label="Black editorial website mockup"><div class="web-window"><span>ARCHIVE / 2024</span><strong>ART<br>ONLINE</strong><span>WEBSITE SYSTEM</span></div></div></article>
@@ -179,10 +163,11 @@
       const heroNames=[...document.querySelectorAll(".hero__name")];
       const portrait=document.querySelector(".hero__portrait");
       const equation=document.querySelector("#creative-equation");
+      const equationDock=equation.querySelector(".equation-dock");
       const equationTokens=[...equation.querySelectorAll("[data-equation-token]")];
       const equationSlots=[...equation.querySelectorAll(".equation-slot")];
       const equationSentence=document.querySelector("#equation-sentence");
-      const equationCopy=()=>content.hero?.equationSentence||"I make complex things clear—and clear things enjoyable.";
+      const equationCopy=()=>content.hero?.equationSentence||"I make complex things easy—and easy things fun.";
       const hint=document.querySelector(".hero__hint");
       const siteNav=document.querySelector(".site-nav");
       const story=document.querySelector(".projects-story");
@@ -230,7 +215,7 @@
       function cancelEquationWork(){clearTimeout(revealTimer);clearInterval(typeTimer);revealTimer=0;typeTimer=0}
       function positionEquationTokens(){
         const equationRect=equation.getBoundingClientRect();
-        equationTokens.forEach((token,index)=>{const slot=equationSlots[index];if(!slot)return;const slotRect=slot.getBoundingClientRect();const tokenRect=token.getBoundingClientRect();token.style.setProperty("--settled-left",`${slotRect.left-equationRect.left+(slotRect.width-tokenRect.width)/2}px`);token.style.setProperty("--settled-top",`${slotRect.top-equationRect.top+(slotRect.height-tokenRect.height)/2}px`)})
+        equationTokens.forEach((token,index)=>{const slot=equationSlots[index];if(!slot)return;const slotRect=slot.getBoundingClientRect();token.style.setProperty("--settled-left",`${slotRect.left-equationRect.left+slotRect.width/2}px`);token.style.setProperty("--settled-top",`${slotRect.top-equationRect.top+slotRect.height/2}px`)})
       }
       function positionCompactProjectsHeading(){if(innerWidth<=800){projectsTitle.style.setProperty("--compact-top",`${Math.ceil(siteNav.getBoundingClientRect().height+16)}px`)}else projectsTitle.style.removeProperty("--compact-top")}
       function finishEquation(){cancelEquationWork();positionEquationTokens();equation.classList.add("is-active","is-result-visible");equationSentence.textContent=equationCopy();equationActive=true}
@@ -273,11 +258,11 @@
       function schedule(){if(!frame)frame=requestAnimationFrame(update)}
       function remeasure(){measure();schedule()}
 
-      equation.addEventListener("pointerenter",()=>{if(touchMode)return;pointerInside=true;activateEquation()});
-      equation.addEventListener("pointerleave",()=>{if(touchMode)return;pointerInside=false;if(!focusInside)deactivateEquation()});
-      equation.addEventListener("focusin",()=>{focusInside=true;if(!touchMode)activateEquation()});
-      equation.addEventListener("focusout",()=>{setTimeout(()=>{focusInside=equation.contains(document.activeElement);if(!touchMode&&!focusInside&&!pointerInside)deactivateEquation()},0)});
-      equation.addEventListener("click",()=>{if(!touchMode)return;touchRequested=!touchRequested;if(touchRequested)activateEquation();else deactivateEquation()});
+      equationDock.addEventListener("pointerenter",()=>{if(touchMode)return;pointerInside=true;activateEquation()});
+      equationDock.addEventListener("pointerleave",()=>{if(touchMode)return;pointerInside=false;if(!focusInside)deactivateEquation()});
+      equationDock.addEventListener("focusin",()=>{focusInside=true;if(!touchMode)activateEquation()});
+      equationDock.addEventListener("focusout",()=>{setTimeout(()=>{focusInside=equation.contains(document.activeElement);if(!touchMode&&!focusInside&&!pointerInside)deactivateEquation()},0)});
+      equationDock.addEventListener("click",()=>{if(!touchMode)return;touchRequested=!touchRequested;if(touchRequested)activateEquation();else deactivateEquation()});
       track.addEventListener("keydown",event=>{if(reduced.matches)return;const step=metrics.storyTravel/2;if(event.key==="ArrowLeft"){event.preventDefault();scrollBy({top:-step,behavior:paused?"auto":"smooth"})}if(event.key==="ArrowRight"){event.preventDefault();scrollBy({top:step,behavior:paused?"auto":"smooth"})}});
       toggle.addEventListener("click",()=>{paused=!paused;reconcileEquation();syncToggle();schedule()});
       addEventListener("scroll",schedule,{passive:true});addEventListener("resize",remeasure);
@@ -288,3 +273,4 @@
   </script>
 </body>
 </html>
+
