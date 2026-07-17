@@ -16,7 +16,14 @@ window.PORTFOLIO_CONTENT = {
   "hero": {
     "intro": "I plan, design and code.",
     "equationSentence": "I make complex things easy—and easy things fun.",
-    "hint": "Scroll to explore"
+    "hint": "Scroll to explore",
+    "portrait": {
+      "src": "assets/images/hero-photo-desktop.webp",
+      "mobileSrc": "assets/images/hero-photo-mobile.webp",
+      "alt": "WEI XINRU sitting by the water in evening light",
+      "width": 1920,
+      "height": 1280
+    }
   },
   "projects": [
     {
@@ -110,6 +117,29 @@ window.PORTFOLIO_CONTENT = {
     "eyebrow": "Photography",
     "summary": "Three moments from an evolving archive. Scroll through the stack, or open the full chronology.",
     "detailIntro": "A chronological photography archive. Each period will pair a short reflection with mixed portrait and landscape work, leaving enough space for every image to breathe.",
+    "featured": [
+      {
+        "src": "assets/images/hero-photo-desktop.webp",
+        "alt": "WEI XINRU by the water in evening light",
+        "caption": "Water / Memory",
+        "width": 1920,
+        "height": 1280
+      },
+      {
+        "src": "assets/images/about-photo-desktop.webp",
+        "alt": "WEI XINRU standing in a green landscape",
+        "caption": "Green / Portrait",
+        "width": 1800,
+        "height": 1200
+      },
+      {
+        "src": "assets/images/hero-photo-mobile.webp",
+        "alt": "A portrait by the water",
+        "caption": "Light / Return",
+        "width": 960,
+        "height": 640
+      }
+    ],
     "eras": [
       {
         "id": "period-01",
@@ -159,7 +189,14 @@ window.PORTFOLIO_CONTENT = {
     "email": "weixinruelsie@gmail.com",
     "linkedin": "",
     "resumeEn": "",
-    "resumeZh": ""
+    "resumeZh": "",
+    "portrait": {
+      "src": "assets/images/about-photo-desktop.webp",
+      "mobileSrc": "assets/images/about-photo-mobile.webp",
+      "alt": "Portrait of WEI XINRU in a green landscape",
+      "width": 1800,
+      "height": 1200
+    }
   }
 };
 

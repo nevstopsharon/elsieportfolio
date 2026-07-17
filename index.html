@@ -140,10 +140,7 @@
     </nav>
   </header>
 
-  <button id="motion-toggle" class…493 tokens truncated…/h2>
-        <div id="project-track" class="project-track" role="region" aria-label="Selected projects. Scroll vertically or use arrow keys to move horizontally." tabindex="0">
-          <article class="project-card" data-project-id="popup"><div class="project-meta"><span class="project-number">01 · POP-UP EXPERIENCE · 6 MIN READ</span><div><h3>Pop-up Experience</h3><p>A concept-led pop-up experience connecting space, story and participation.</p><div class="project-tags"><span class="tag">Strategy</span><span class="tag">Event</span><span class="tag">Identity</span></div><a class="action" href="project.html#popup">View project</a></div></div><div class="project-visual project-visual--popup" role="img" aria-label="Abstract red pop-up event visual"><span class="visual-word">POP<br>UP</span></div></article>
-          <article class="project-card" data-project-id="artist-website"><div class="project-meta"><span class="project-number">02 · WEBSITE · 5 MIN READ</span><div><h3>Artist Website</h3><p>A flexible portfolio system balancing artwork, personality and simple maintenance.</p><div class="project-tags"><span class="tag">Website</span><span class="tag">UX</span><span class="tag">Code</span></div><a class="action" href="project.html#artist-website">View project</a></div></div><div class="project-visual project-visual--web" role="img" aria-label="Black editorial website mockup"><div class="web-window"><span>ARCHIVE / 2024</span><strong>ART<br>ONLINE</strong><span>WEBSITE SYSTEM</span></div></div></article>
+  <button id="motion-toggle" class…844 tokens truncated…iv class="web-window"><span>ARCHIVE / 2024</span><strong>ART<br>ONLINE</strong><span>WEBSITE SYSTEM</span></div></div></article>
           <article class="project-card" data-project-id="app-proposal"><div class="project-meta"><span class="project-number">03 · CONCEPT APP · NOT LAUNCHED · 7 MIN READ</span><div><h3>App Product Proposal</h3><p>One of three graduate app proposals turning everyday routines into shared progress.</p><div class="project-tags"><span class="tag">Concept</span><span class="tag">Not launched</span><span class="tag">Research</span></div><a class="action" href="project.html#app-proposal">View project</a></div></div><div class="project-visual project-visual--app" role="img" aria-label="Two mobile app prototype screens"><div class="app-stack"><div class="app-phone">TODAY</div><div class="app-phone">CARE</div></div></div></article>
         </div>
       </div>
@@ -187,9 +184,22 @@
       const clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
 
       function setText(selector,value){const node=document.querySelector(selector);if(node&&typeof value==="string"&&value)node.textContent=value}
+      function applyPictureMedia(picture,media){
+        if(!picture||!media||typeof media!=="object")return;
+        const image=picture.querySelector("img");const source=picture.querySelector("source");
+        if(image&&media.src)image.src=media.src;if(image&&media.alt)image.alt=media.alt;
+        if(image&&Number.isInteger(media.width)&&media.width>0)image.width=media.width;if(image&&Number.isInteger(media.height)&&media.height>0)image.height=media.height;
+        if(source&&media.mobileSrc)source.srcset=media.mobileSrc;
+      }
+      function applyImageMedia(image,media){
+        if(!image||!media||typeof media!=="object")return;
+        if(media.src)image.src=media.src;if(media.alt)image.alt=media.alt;
+        if(Number.isInteger(media.width)&&media.width>0)image.width=media.width;if(Number.isInteger(media.height)&&media.height>0)image.height=media.height;
+      }
       function applyContent(){
         if(content.meta?.title)document.title=content.meta.title;
         const description=document.querySelector('meta[name="description"]');if(description&&content.meta?.description)description.content=content.meta.description;
+        applyPictureMedia(document.querySelector(".hero>picture.hero__portrait"),content.hero?.portrait);
         setText(".hero__hint",content.hero?.hint);
         (content.projects||[]).forEach(project=>{
           const card=document.querySelector(`[data-project-id="${CSS.escape(project.id)}"]`);if(!card)return;
@@ -203,7 +213,9 @@
         setText("#social-title",content.social?.title);setText("#social .eyebrow",content.social?.eyebrow);setText("#social .section-detail p",content.social?.summary);
         [["#social-xiaohongshu",content.social?.platforms?.xiaohongshu],["#social-douyin",content.social?.platforms?.douyin]].forEach(([selector,platform])=>{const link=document.querySelector(selector);if(link&&platform?.href)link.href=platform.href;if(link&&platform?.label)link.setAttribute("aria-label",platform.label)});
         setText("#photo-title",content.photography?.title);setText("#photography .eyebrow",content.photography?.eyebrow);setText("#photography .section-detail p",content.photography?.summary);
+        (content.photography?.featured||[]).slice(0,photoCards.length).forEach((item,index)=>{const card=photoCards[index];applyImageMedia(card.querySelector("img"),item);const caption=card.querySelector(".photo-card__caption");if(caption&&item.caption&&caption.firstChild)caption.firstChild.textContent=`${item.caption} `});
         setText("#about-title",content.about?.title);setText("#about-contact .eyebrow",content.about?.eyebrow);
+        applyPictureMedia(document.querySelector(".about-visual picture"),content.about?.portrait);
         const aboutParagraphs=document.querySelectorAll("#about-contact>p");if(aboutParagraphs[0]&&content.about?.summary)aboutParagraphs[0].textContent=content.about.summary;if(aboutParagraphs[1]&&content.about?.availability)aboutParagraphs[1].querySelector("strong").textContent=content.about.availability;
         setText(".about-resume h3",content.about?.resumeHeading);setText(".about-resume>p",content.about?.resumeSummary);
         const skills=document.querySelector(".about-list");if(skills&&Array.isArray(content.about?.skills))skills.replaceChildren(...content.about.skills.map(label=>{const item=document.createElement("li");item.textContent=label;return item}));
