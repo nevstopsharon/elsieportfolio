@@ -205,4 +205,3 @@ window.PORTFOLIO_CONTENT = {
     }
   }
 };
-
