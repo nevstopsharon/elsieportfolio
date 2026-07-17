@@ -156,7 +156,7 @@ window.PORTFOLIO_CONTENT = {
       "Photography practice"
     ],
     "education": "",
-    "email": "",
+    "email": "weixinruelsie@gmail.com",
     "linkedin": "",
     "resumeEn": "",
     "resumeZh": ""
