@@ -132,7 +132,7 @@ window.PORTFOLIO_CONTENT = {
         "height": 1280
       },
       {
-        "src": "assets/images/about-photo-desktop.webp",
+        "src": "assets/images/photo-stack-green.webp",
         "alt": "WEI XINRU standing in a green landscape",
         "caption": "Green / Portrait",
         "width": 1800,
@@ -199,9 +199,9 @@ window.PORTFOLIO_CONTENT = {
     "portrait": {
       "src": "assets/images/about-photo-desktop.webp",
       "mobileSrc": "assets/images/about-photo-mobile.webp",
-      "alt": "Portrait of WEI XINRU in a green landscape",
-      "width": 1800,
-      "height": 1200
+      "alt": "Professional headshot of WEI XINRU against a blue background",
+      "width": 1122,
+      "height": 1402
     }
   }
 };
